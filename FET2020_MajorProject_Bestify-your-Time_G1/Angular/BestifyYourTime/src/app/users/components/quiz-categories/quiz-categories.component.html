@@ -1,0 +1,43 @@
+<!-- <div class="container">
+    <div class="list row">
+        <div class="col-md-8">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search by Quiz title" (input)="OnInput($event)" />
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" (click)="searchByTitle()">
+                        Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="container d-flex">
+  <div class="row">
+    <div class="card m-4" *ngFor="let item of data">
+      <!-- <img src="../../../../assets/images/art.jpg" class="card-img-top quizcategory-card-img"> -->
+      <div class="card-body">
+        <h5 class="card-title">{{ item.quiz_cat_name }}</h5>
+        <p class="card-text">
+          here are some {{ item.quiz_cat_name }} quizzes for you...
+        </p>
+        <!-- <a routerLink="/user/users/quizes/{{data[0].quize_cat_id}}"  class="btn btn-primary">go to {{data[0].quize_cat_name}} quizes</a> -->
+        <a [routerLink]="['quizcategories', item.quiz_cat_id]" class="btn">{{
+          item.quiz_cat_name
+        }}</a>
+      </div>
+    </div>
+  </div>
+  <!-- 1 end -->
+
+  <!-- <div class="content">
+        <router-outlet></router-outlet>
+    </div> -->
+</div>
+<!-- <div class="container column">
+    <button type="button" class="btn btn-light"  *ngFor="let item of searchedQuiz"> {{item.quiz_name}}
+        <button type="button" class="btn btn-outline-secondary" [routerLink]="['quiz',item.quiz_id]">play</button>
+        <button class="btn btn-primary" (click)="submit(item.quiz_id)">Submit</button>
+    </button>
+</div> -->
+
+<router-outlet></router-outlet>

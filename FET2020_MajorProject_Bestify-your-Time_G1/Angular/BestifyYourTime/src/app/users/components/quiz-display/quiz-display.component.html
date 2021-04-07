@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-11">
+        <p class="h1 text-center"> {{ quiz.quiz_name}}</p>
+    </div>
+    <div class="col-1">
+        <button mat-icon-button (click)="onToggleFavButton()">
+            <mat-icon *ngIf="isFav"> favorite </mat-icon>
+            <mat-icon *ngIf="!isFav" > favorite_border </mat-icon>
+        </button>
+    </div>
+    
+    </div>
+    <div class="mycontainer">
+    <p class="text-justify"> {{quiz.description}} </p>
+    <p class="h6 text-center"> Time to complete quiz : {{timeString}} </p>
+    
+    <button class="btn btn-block" [disabled]="disableMainButton" [class.btn-primary]="mainButtonText==='Start Quiz'" [class.btn-danger]="mainButtonText==='Pause Quiz'" [class.btn-warning]="mainButtonText==='Resume Quiz'" (click)="onMainButtonClick()"> {{mainButtonText}} </button>
+    <div *ngIf="showQuestions">
+        <app-quiz-display-question *ngFor="let ques of quiz.questions" [quesobject]=ques [state]="quizDataService.state"></app-quiz-display-question>
+        <button class="btn btn-block" (click)="submitQuiz()"> Submit </button>
+    </div>
+    <div class="timer" #timer></div>
+    </div>
+
+<!-- <router-outlet></router-outlet> -->
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal" [style.display]="showModal ? 'block' : 'none'">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">{{modalHeader}}</h4>
+          <button type="button" class="close" data-dismiss="modal" (click) = "hideModalFunc()">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <p>{{modalBody}}</p>
+        </div>
+  
+        <!-- <img src="'../../../../assets/images/correct.png" height="200px" width="200px"> -->
+              
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" (click) = "hideModalFunc()">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>

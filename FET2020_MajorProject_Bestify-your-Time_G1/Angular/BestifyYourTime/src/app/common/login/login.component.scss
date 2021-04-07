@@ -1,0 +1,28 @@
+#profile-img{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+
+}
+
+#card{
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    #profile-img{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    
+    }
+    
+  }
+  .btn{
+    background-color:#7251B5;
+    color : #DAC3E8;
+}
+
+.login-link a{
+    color: #815AC0;
+}

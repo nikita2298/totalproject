@@ -1,0 +1,27 @@
+<!-- <!DOCTYPE html> -->
+<!-- <p>games works!</p> -->
+<div class="container" *ngIf="showMenu" >
+    <div class="row">
+        <div class="card m-5" style="width: 18rem;">
+            <img class="card-img-top" [src]="snakeGameImageLink" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Snake</h5>
+                <p class="card-text">Feed the hungry snake. With 3 Modes to play!</p>
+                <button (click)="selectGame('snake')" class="btn">Play Now</button>
+                <!-- <button  class="btn btn-primary">Play Now</a> -->
+            </div>
+        </div>
+        <div class="card m-5" style="width: 18rem;">
+            <img class="card-img-top" [src]="tetrisGameImageLink" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Tetris</h5>
+                <p class="card-text">Tetris tiles!</p>
+                <button (click)="selectGame('tetris')" class="btn">Play Now</button>
+                <!-- <button  class="btn btn-primary">Play Now</a> -->
+            </div>
+        </div>
+    </div>
+</div>
+<app-ngx-snake *ngIf="selectedGame === 'snake'"></app-ngx-snake>
+<app-tetris *ngIf="selectedGame === 'tetris'"></app-tetris>
+<!-- <router-outlet></router-outlet> -->

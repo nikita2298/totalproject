@@ -1,0 +1,25 @@
+<!-- <p>puzzles works!</p> -->
+<mat-tab-group mat-align-tabs="start" class="m-4">
+  <mat-tab label="Puzzle Analysis">
+    <div class="canvas" *ngIf="barChartData">
+      <canvas
+        baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLables"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"
+      >
+      </canvas>
+    </div>
+  </mat-tab>
+  <mat-tab label="Add Puzzle">
+    <div>
+     
+
+      
+      <app-add-puzzle></app-add-puzzle>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+

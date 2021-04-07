@@ -1,0 +1,12 @@
+<mat-tab-group mat-align-tabs="center" class="material-tab mt-5 mb-5">
+  <mat-tab label="{{ data[0]?.cat_name }}" class="m-2">
+    <app-quiz-categories></app-quiz-categories>
+  </mat-tab>
+  <mat-tab label="{{ data[1]?.cat_name }}" class="m-2">
+    <app-showpuzzle></app-showpuzzle>
+  </mat-tab>
+  <mat-tab label="{{ data[2]?.cat_name }}" class="m-2">
+    <app-games></app-games>
+  </mat-tab>
+  <!-- <router-outlet></router-outlet> -->
+</mat-tab-group>

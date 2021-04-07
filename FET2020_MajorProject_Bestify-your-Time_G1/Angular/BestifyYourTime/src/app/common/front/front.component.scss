@@ -1,0 +1,35 @@
+
+  
+.tile{
+    background-color: #d2b7e5;
+   
+}  
+  .features-icons {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  
+  .features-icons .features-icons-item  {
+    max-width: 20rem;
+    height: 100%;
+    a{
+      color: #815AC0;
+    }
+  }
+  
+  .features-icons .features-icons-item .features-icons-icon {
+    height: 7rem;
+  }
+  
+  .features-icons .features-icons-item .features-icons-icon i {
+    font-size: 4.5rem;
+  }
+  
+  .features-icons .features-icons-item:hover .features-icons-icon i {
+    font-size: 5rem;
+  }
+
+  .features-icons .features-icons-item .features-icons-icon i fa-icon {
+    color : #7251B5;
+  }
+  

@@ -1,0 +1,17 @@
+<!-- <p>admin works!</p> -->
+<!-- <button class="btn btn-primary" [routerLink]="['addpuzzle']">Add Puzzle</button >
+    <button class="btn btn-primary" [routerLink]="['addquiz']">Add Quiz</button >
+    <router-outlet></router-outlet> -->
+<mat-tab-group mat-align-tabs="center" class="material-tab mt-5 mb-5">
+  <mat-tab label="Quiz">
+  <app-quizcategories></app-quizcategories> 
+  </mat-tab>
+  <mat-tab label="Puzzle">
+    <app-puzzles></app-puzzles>
+  </mat-tab>
+  <mat-tab label="Games">
+    <app-games></app-games>
+  </mat-tab>
+</mat-tab-group>
+
+<!-- <app-quiz-add></app-quiz-add> -->

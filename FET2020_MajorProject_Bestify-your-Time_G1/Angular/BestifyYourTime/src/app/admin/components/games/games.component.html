@@ -1,0 +1,30 @@
+<div class="container row">
+  <div style="display: block; width: 50%">
+    <canvas
+      baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+    >
+    </canvas>
+  </div>
+  <div style="display: block; width: 50%">
+    <canvas
+      baseChart
+      [data]="pieChartData"
+      [labels]="pieChartLabels"
+      [chartType]="pieChartType"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend"
+      [colors]="chartColors"
+    >
+    </canvas>
+  </div>
+</div>
+<div class="container text-center">
+  <button class="btn" (click)="mail()">Mail</button>
+</div>

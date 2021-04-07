@@ -1,0 +1,70 @@
+<p>categories works!</p>
+
+<div class="container">
+  <div class="container d-flex">
+    <div class="card" style="width: 18rem">
+      <img
+        src="../../../../assets/quiz.jpg"
+        class="card-img-top"
+        style="height: 200px"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ data[0].cat_name }}</h5>
+        <p class="card-text">here are some {{ data[0].cat_name }} for you...</p>
+        <a routerLink="quizcategories" class="btn btn-primary"
+          >click here for {{ data[0].cat_name }}</a
+        >
+      </div>
+    </div>
+    <div class="card" style="width: 18rem">
+      <img
+        src="../../../../assets/brainteaser.jpg"
+        class="card-img-top"
+        style="height: 200px"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ data[1].cat_name }}</h5>
+        <p class="card-text">here are some {{ data[1].cat_name }} for you...</p>
+        <a routerLink="puzzles" class="btn btn-primary"
+          >click here for {{ data[1].cat_name }}</a
+        >
+      </div>
+    </div>
+    <div class="card" style="width: 18rem">
+      <img
+        src="../../../../assets/games.jpg"
+        class="card-img-top"
+        style="height: 200px"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ data[2].cat_name }}</h5>
+        <p class="card-text">here are some {{ data[2].cat_name }} for you...</p>
+        <a routerLink="games" class="btn btn-primary"
+          >click here for {{ data[2].cat_name }}</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<button class="btn btn-primary" [routerLink]="['addpuzzle']">ADD PUZZLE</button>
+
+<!-- <div>
+    <ul> -->
+<!-- *ngFor="let item of data" -->
+<!-- <li >    -->
+<!-- <a routerLink="/quizes">{{data[0].cat_name}}</a> -->
+<!-- <a routerLink="admin/quizes"> {{data[0].cat_name}} </a>            -->
+<!-- {{item.cat_id}} -->
+<!-- </li> -->
+<!-- <li >   
+            <a routerLink="admin/puzzles"> {{data[1].cat_name}} </a>           
+            
+        </li>
+        <li >   
+            <a routerLink="admin/games"> {{data[2].cat_name}} </a>           
+            
+        </li>
+    </ul>           
+</div> -->
+
+<router-outlet></router-outlet>

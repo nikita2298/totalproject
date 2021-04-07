@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by quize title"
+          (input)="OnInput($event)"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="searchByTitle()"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container column">
+  <div *ngFor="let item of data">
+    <div class="row m-1">
+      <div class="col-4">
+        <h1>{{ item.quiz_name }}</h1>
+      </div>
+      <div class="col-4">
+        <button
+          class="btn btn-outline-secondary mr-1"
+          [routerLink]="['quiz', item.quiz_id]"
+        >
+          play
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

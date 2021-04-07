@@ -1,0 +1,19 @@
+.quizcategory-card-img{
+    height:100px
+}
+.content{
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+
+  .card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    // margin-bottom: 10px; /* Added */
+    background-color: #DAC3E8;
+    width: 18rem;
+  }
+  .btn{
+    background-color:#7251B5;
+    color : #DAC3E8;
+}
